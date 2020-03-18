@@ -1,4 +1,12 @@
-    public function importFromExcel(Request $request)
+<?php
+
+namespace App\Http\Controllers;
+
+
+class MemberController extends Controller
+{
+    
+ public function importFromExcel(Request $request)
     {
 
         try {
@@ -97,3 +105,21 @@
         return back()->with('success', 'members imported successfully');
 
     }
+
+
+
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Member $member
+     * @return Response
+     */
+    public
+    function destroy(Member $member)
+    {
+        //
+    }
+
+
+}
